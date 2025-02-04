@@ -5,17 +5,17 @@
 #                                                     +:+ +:+         +:+      #
 #    By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/02/04 14:22:48 by tursescu          #+#    #+#              #
-#    Updated: 2025/02/04 17:15:07 by tursescu         ###   ########.fr        #
+#    Created: 2025/02/04 17:14:42 by tursescu          #+#    #+#              #
+#    Updated: 2025/02/04 18:20:44 by tursescu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = Zombie.cpp zombieHorde.cpp main.cpp
+SRC = main.cpp File.cpp
 CXX = @c++
 RM = @rm -f
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 OBJS = $(SRC:.cpp=.o)
-NAME = zombieHorde
+NAME = replace
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 all: $(NAME)
