@@ -6,18 +6,18 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 15:59:29 by tursescu          #+#    #+#             */
-/*   Updated: 2025/02/04 16:48:00 by tursescu         ###   ########.fr       */
+/*   Updated: 2025/02/06 12:18:40 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
 
 HumanA::HumanA(const std::string& name, Weapon& weapon) : name(name), weapon(weapon) {
-    std::cout << name << " has been created with a " << weapon.getType() << "as their weapon\n";
+    std::cout << BLUE << name << " has been created with a " << weapon.getType() << " as their weapon" << RESET << '\n';
 };
 
 HumanA::~HumanA() {
-    std::cout << name << " has been destroyed\n";
+    std::cout <<RED << name << " has been destroyed" << RESET << '\n';
 };
 
 void HumanA::attack() const{

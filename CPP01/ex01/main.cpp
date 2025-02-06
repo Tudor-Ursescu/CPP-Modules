@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 14:28:57 by tursescu          #+#    #+#             */
-/*   Updated: 2025/02/04 14:58:21 by tursescu         ###   ########.fr       */
+/*   Updated: 2025/02/06 12:23:51 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 int main() {
     int N = 6;
     Zombie *horde = zombieHorde(N, "Bob");
-    
     if (horde) {
         for (int i = 0; i < N; i++) {
             horde[i].announce();

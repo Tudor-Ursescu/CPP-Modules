@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 11:23:43 by tursescu          #+#    #+#             */
-/*   Updated: 2025/02/04 14:19:04 by tursescu         ###   ########.fr       */
+/*   Updated: 2025/02/06 12:25:20 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 
 Zombie::Zombie(std::string name) : name(name) {
-    std::cout << name << ": is being constructed" << std::endl;
+    std::cout << BLUE << name << ": is being constructed" << RESET << std::endl;
 }
 
 Zombie::~Zombie() {
-    std::cout << name << ": is being destroyed" << std::endl;
+    std::cout << RED << name << ": is being destroyed" << RESET << std::endl;
 }
 
 void Zombie::announce(void) {
-    std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+    std::cout << YELLOW << name << ": BraiiiiiiinnnzzzZ..." << RESET << std::endl;
 }

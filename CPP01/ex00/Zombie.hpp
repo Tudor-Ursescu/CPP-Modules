@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 11:23:38 by tursescu          #+#    #+#             */
-/*   Updated: 2025/02/04 14:19:26 by tursescu         ###   ########.fr       */
+/*   Updated: 2025/02/06 12:24:19 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@
 # include <string>
 # include <iomanip>
 
+# define RED "\033[31m"
+# define BLUE "\033[34m"
+# define RESET "\033[0m"
+# define YELLOW "\033[33m"
 
 class Zombie {
 private:

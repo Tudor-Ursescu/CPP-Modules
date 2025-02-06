@@ -6,18 +6,18 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 16:12:48 by tursescu          #+#    #+#             */
-/*   Updated: 2025/02/04 16:55:13 by tursescu         ###   ########.fr       */
+/*   Updated: 2025/02/06 12:17:29 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
 HumanB::HumanB(const std::string& name) : name(name) , weapon(NULL) {
-    std::cout << name << " has been created.\n";
+    std::cout << BLUE << name << " has been created." << RESET << '\n';
 }
 
 HumanB::~HumanB() {
-    std::cout << name << " has been destroyed.\n";
+    std::cout << RED << name << " has been destroyed." << RESET << '\n';
 }
 
 void HumanB::setWeapon(Weapon& weapon) {

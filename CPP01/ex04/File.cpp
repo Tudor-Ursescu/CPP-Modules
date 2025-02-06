@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 17:23:31 by tursescu          #+#    #+#             */
-/*   Updated: 2025/02/04 18:44:30 by tursescu         ###   ########.fr       */
+/*   Updated: 2025/02/06 12:12:11 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,15 @@ File::File(const std::string& name, const std::string& s1, const std::string& s2
     this->name = name;
     this->s1 = s1;
     this->s2 = s2;
-    std::cout << "File Class initialized \n";
+    std::cout << BLUE << "File Class initialized" << RESET << '\n'; 
+}
+
+File::File() : name(""), s1(""), s2("") {
+    std::cout << YELLOW << "Default constructor called" << RESET << '\n';
 }
 
 File::~File() {
-    std::cout << "File Class destroyed\n";
+    std::cout << RED << "File Class destroyed" << RESET << '\n';
 }
 
 const std::string& File::getFileName() const { return (name); }
@@ -52,14 +56,14 @@ std::string File::replaceOccurrences(const std::string& content, const std::stri
 
 void File::processFile() const {
     std::ifstream inputFile(name.c_str());
+    // permissions edge case handler
     if (!inputFile) {
-        std::cerr << "Error: could not open the file " << name << '\n';
+        std::cerr << "Error: could not open the file " << name << "Check file permissions.\n";
         return ;
     }
-    // permissions edge case handler
-    if (!inputFile.is_open()) {
-        std::cerr << "Error: could not open file for reading. Check file permissions.\n";
-    }
+    // if (!inputFile.is_open()) {
+    //     std::cerr << "Error: could not open file for reading. Check file permissions.\n";
+    // }
     //read the file content into a string
     std::string content;
     std::string line;
