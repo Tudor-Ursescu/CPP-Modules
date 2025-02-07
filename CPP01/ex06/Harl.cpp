@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 12:34:02 by tursescu          #+#    #+#             */
-/*   Updated: 2025/02/06 13:36:43 by tursescu         ###   ########.fr       */
+/*   Updated: 2025/02/07 13:37:17 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,15 +78,27 @@ void Harl::complain(std::string level) {
         case 0: // DEBUG
             std::cout << "[ DEBUG ]" << '\n';
             debug();
-            std::cout << '\n';
+            std::cout << "[ INFO ]" << '\n';
+            info();
+            std::cout << "[ WARNING ]" << '\n';
+            warning();
+            std::cout << "[ ERROR ]" << '\n';
+            error();
+            break;
         case 1: // INFO
             std::cout << "[ INFO ]" << '\n';
             info();
-            std::cout << '\n';
+            std::cout << "[ WARNING ]" << '\n';
+            warning();
+            std::cout << "[ ERROR ]" << '\n';
+            error();
+            break;
         case 2: // WARNING
             std::cout << "[ WARNING ]" << '\n';
             warning();
-            std::cout << '\n';
+            std::cout << "[ ERROR ]" << '\n';
+            error();
+            break;
         case 3: // ERROR
             std::cout << "[ ERROR ]" << '\n';
             error();
@@ -97,3 +109,4 @@ void Harl::complain(std::string level) {
             break;
     }
 }
+
