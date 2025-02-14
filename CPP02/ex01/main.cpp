@@ -1,0 +1,32 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: turescu <turescu@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/08 11:41:13 by turescu           #+#    #+#             */
+/*   Updated: 2025/02/09 14:34:54 by turescu          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "Fixed.hpp"
+
+int main(void)
+{
+    Fixed a;
+    Fixed const b(10);
+    Fixed const c(42.42f);
+    Fixed const d(b);
+    a = Fixed(1234.4321f);
+    
+    std::cout << BLUE << "a is " << a << RESET << std::endl;
+    std::cout << BLUE << "b is " << b << RESET << std::endl;
+    std::cout << BLUE << "c is " << c << RESET << std::endl;
+    std::cout << BLUE << "d is " << d << RESET << std::endl;
+    std::cout << BLUE << "a is " << a.toInt() << " as integer" << RESET << std::endl;
+    std::cout << BLUE << "b is " << b.toInt() << " as integer" << RESET << std::endl;
+    std::cout << BLUE << "c is " << c.toInt() << " as integer" << RESET << std::endl;
+    std::cout << BLUE << "d is " << d.toInt() << " as integer" << RESET << std::endl;
+    return 0;
+}
