@@ -6,22 +6,22 @@
 /*   By: turescu <turescu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 10:34:49 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/16 14:37:41 by turescu          ###   ########.fr       */
+/*   Updated: 2025/02/16 17:36:01 by turescu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap() : name("Unknown"), health(10), energy(10), damage(0) {
-    std::cout << LAVENDER << "ClapTrap default constructor called" << RESET << std::endl;
+    std::cout << LAVENDER << "ClapTrap " << this->name  << " default constructor called" << RESET << std::endl;
 }
 
 ClapTrap::ClapTrap(const std::string& name) : name(name), health(10), energy(10), damage(0) {
-    std::cout << TEAL << "ClapTrap parameter constructor called" << RESET << std::endl;
+    std::cout << TEAL << "ClapTrap " << this->name << " parameter constructor called" << RESET << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap& other) : name(other.name), health(other.health), energy(other.energy), damage(other.damage){
-    std::cout << PINK << "ClapTrap copy constructor called" << RESET << std::endl;
+    std::cout << PINK << "ClapTrap " << this->name << " copy constructor called" << RESET << std::endl;
 }
 
 ClapTrap& ClapTrap::operator = (const ClapTrap& other) {
@@ -31,7 +31,7 @@ ClapTrap& ClapTrap::operator = (const ClapTrap& other) {
         this->energy = other.energy;
         this->damage = other.damage;
     }
-    std::cout << BLUE << "ClapTrap copy assignement operator called" << RESET << std::endl;
+    std::cout << BLUE << "ClapTrap " << this->name << " copy assignement operator called" << RESET << std::endl;
     return (*this);
 }
 
@@ -87,7 +87,7 @@ void ClapTrap::getRepaired(unsigned int amount) {
     }
     else{
         if (amount == 0) {
-            std::cout << PINK << "404 REPAIR PARTS NOT FOUND" << RESET << '\n';
+            std::cout << PINK << "ClapTrap" << this->name << " 404 REPAIR PARTS NOT FOUND" << RESET << '\n';
             return ;
         }
         else {

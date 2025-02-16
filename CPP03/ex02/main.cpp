@@ -6,17 +6,16 @@
 /*   By: turescu <turescu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 10:49:34 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/16 15:18:00 by turescu          ###   ########.fr       */
+/*   Updated: 2025/02/16 17:38:13 by turescu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main(void) {
     {
-        ScavTrap B("Butter");
-        B.attack("Eddie");
-        B.guardGate();
+        FragTrap C("Clint");
+        C.highFivesGuys();
     }
     return 0;
 }

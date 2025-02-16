@@ -6,7 +6,7 @@
 /*   By: turescu <turescu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 13:48:36 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/16 15:16:48 by turescu          ###   ########.fr       */
+/*   Updated: 2025/02/16 17:36:51 by turescu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ ScavTrap::ScavTrap() : ClapTrap()
     this->health = 100;
     this->energy = 50;
     this->damage = 20;
-    std::cout << BLUE << "ScavTrap default constructor called" << RESET << '\n';
+    std::cout << BLUE << "ScavTrap " << this->name << " default constructor called" << RESET << '\n';
 }
 
 ScavTrap::ScavTrap(const ClapTrap &other) : ClapTrap(other)
 {
-    std::cout << BLUE << "ScavTrap copy constructor called" << RESET << '\n';
+    std::cout << BLUE << "ScavTrap " << this->name << " copy constructor called" << RESET << '\n';
 }
 
 ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name)
@@ -30,7 +30,7 @@ ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name)
     this->health = 100;
     this->energy = 50;
     this->damage = 20;
-    std::cout << BLUE << "ScavTrap parameter constructor called" << RESET << '\n';
+    std::cout << BLUE << "ScavTrap " << this->name << " parameter constructor called" << RESET << '\n';
 }
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &other)
@@ -42,7 +42,7 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &other)
         this->energy = other.energy;
         this->damage = other.damage;
     }
-    std::cout << TEAL << "ScavTrap copy assignement operator called" << RESET << '\n';
+    std::cout << TEAL << "ScavTrap " << this->name << " copy assignement operator called" << RESET << '\n';
     return (*this);
 }
 
