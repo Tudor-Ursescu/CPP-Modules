@@ -6,7 +6,7 @@
 /*   By: turescu <turescu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 21:11:16 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/22 13:26:26 by turescu          ###   ########.fr       */
+/*   Updated: 2025/02/22 15:48:17 by turescu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ public:
     Cat(const Cat& other);
     Cat& operator= (const Cat& other);
     ~Cat();
-    void makeSound(void) const;
+    void makeSound() const;
+    Brain* getBrain() const;
 };
 
 #endif

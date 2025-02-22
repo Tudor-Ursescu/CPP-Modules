@@ -6,7 +6,7 @@
 /*   By: turescu <turescu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 21:20:33 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/22 15:17:48 by turescu          ###   ########.fr       */
+/*   Updated: 2025/02/22 16:19:02 by turescu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Dog::Dog(const std::string& type) : Animal(type) {
 Dog::Dog(const Dog& other) : Animal(other) {
     this->type = other.type;
     std::cout << BLUE << "Dog copy constructor called" << RESET << std::endl;
-    this->brain = new Brain();
+    this->brain = new Brain(*(other.brain));
 }
 
 Dog& Dog::operator = (const Dog& other) {
@@ -47,4 +47,8 @@ Dog::~Dog() {
 
 void Dog::makeSound(void) const{
     std::cout << BLUE << "BARK BARK!!" << RESET << std::endl;
+}
+
+Brain* Dog::getBrain() const {
+    return brain;
 }

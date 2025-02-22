@@ -6,7 +6,7 @@
 /*   By: turescu <turescu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 21:39:42 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/22 15:17:19 by turescu          ###   ########.fr       */
+/*   Updated: 2025/02/22 15:49:06 by turescu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,8 @@ Cat::~Cat() {
 
 void Cat::makeSound(void) const{
     std::cout << PINK << "Prrrrrrrrrrrrrrrrrr..." << RESET << std::endl;
+}
+
+Brain* Cat::getBrain() const {
+    return brain;
 }

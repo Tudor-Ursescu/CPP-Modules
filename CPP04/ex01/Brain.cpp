@@ -6,7 +6,7 @@
 /*   By: turescu <turescu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 13:10:17 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/22 13:42:18 by turescu          ###   ########.fr       */
+/*   Updated: 2025/02/22 16:03:35 by turescu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,22 @@ Brain& Brain::operator=(const Brain &other) {
 
 Brain::~Brain() {
     std::cout << YELLOW << "Brain destructor called" << RESET << std::endl;
+}
+
+void Brain::setIdea(int index, const std::string& idea) {
+    if (index >= 0 && index < 100) {
+        ideas[index] = idea;
+    }
+    else {
+        std::cout << "Index out of range" << std::endl;
+    }
+}
+
+std::string Brain::getIdea(int index) const{
+    if (index >= 0 && index < 100) {
+        return ideas[index];
+    }
+    else {
+        return "Index out of range";
+    }
 }

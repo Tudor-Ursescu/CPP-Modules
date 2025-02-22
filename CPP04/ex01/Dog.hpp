@@ -6,7 +6,7 @@
 /*   By: turescu <turescu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 21:15:42 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/22 13:36:35 by turescu          ###   ########.fr       */
+/*   Updated: 2025/02/22 15:49:41 by turescu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ public:
     Dog(const Dog& other);
     Dog& operator= (const Dog& other);
     ~Dog();
-    void makeSound(void) const;
+    void makeSound() const;
+    Brain* getBrain() const;
 };
 
 #endif
