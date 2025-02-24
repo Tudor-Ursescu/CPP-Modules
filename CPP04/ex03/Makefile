@@ -5,17 +5,17 @@
 #                                                     +:+ +:+         +:+      #
 #    By: turescu <turescu@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/02/20 20:54:30 by turescu           #+#    #+#              #
-#    Updated: 2025/02/23 11:05:40 by turescu          ###   ########.fr        #
+#    Created: 2025/02/23 11:04:37 by turescu           #+#    #+#              #
+#    Updated: 2025/02/23 16:45:20 by turescu          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp animalZoo.cpp
+SRC = main.cpp AMateria.cpp Ice.cpp Cure.cpp ICharacter.cpp
 CXX = @c++
 RM = @rm -f
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 OBJS = $(SRC:.cpp=.o)
-NAME = smartZoo
+NAME = 
 %.o: %.cpp	
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 all: $(NAME)
