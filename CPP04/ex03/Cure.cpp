@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: turescu <turescu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 14:18:36 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/23 14:27:13 by turescu          ###   ########.fr       */
+/*   Updated: 2025/02/25 12:11:52 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,6 @@ void Cure::use(ICharacter &target) {
     std::cout << DEEP_GREEN << "* heals " << target.getName() << "'s wounds *" << RESET << std::endl; 
 }
 
-AMateria* Cure::clone() const {
+Cure* Cure::clone() const {
     return new Cure(*this);
 }

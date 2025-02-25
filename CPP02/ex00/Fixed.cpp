@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: turescu <turescu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 11:15:41 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/09 14:44:35 by turescu          ###   ########.fr       */
+/*   Updated: 2025/02/24 12:45:08 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Fixed::Fixed() : val(0) {
 }
 
 Fixed::Fixed(const Fixed& copy) : val(copy.val) {
-    std::cout << PINK << "Copy constructor called" << RESET << '\n';
+    std::cout << BLUE << "Copy constructor called" << RESET << '\n';
 }
 
 Fixed& Fixed::operator =( const Fixed& copy ) { 

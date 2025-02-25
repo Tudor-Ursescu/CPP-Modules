@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: turescu <turescu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 12:36:01 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/23 16:44:05 by turescu          ###   ########.fr       */
+/*   Updated: 2025/02/25 12:10:51 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,6 @@ void Ice::use(ICharacter &target) {
     std::cout << BLUE << "*shoots an ice bolt at " << target.getName() << " *";                     
 }
 
-AMateria* Ice::clone() const {
+Ice* Ice::clone() const {
     return new Ice(*this);// returns a new object ice which is a deep copy of the current one
 }

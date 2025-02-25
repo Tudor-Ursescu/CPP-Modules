@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: turescu <turescu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 11:59:02 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/23 13:17:53 by turescu          ###   ########.fr       */
+/*   Updated: 2025/02/25 13:44:53 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,11 @@ AMateria::AMateria(std::string const &type) : type(type) {
     std::cout << LAVENDER << "AMateria parameter constructor called" << RESET << std::endl; 
 }
 
+AMateria::AMateria(const AMateria& other) : type(other.getType()){
+    std::cout << LAVENDER << "AMateria copy constructor called" << RESET << std::endl;
+}
+
+//don't even know if i need this one... after all this is an base abstract class.
 AMateria& AMateria:: operator = (const AMateria &other) {
     if (this != &other) {
         this->type = other.type;

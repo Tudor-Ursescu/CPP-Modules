@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: turescu <turescu@student.42.fr>            +#+  +:+       +#+         #
+#    By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/08 11:07:34 by turescu           #+#    #+#              #
-#    Updated: 2025/02/15 17:48:16 by turescu          ###   ########.fr        #
+#    Updated: 2025/02/25 11:22:42 by tursescu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CXX = @c++
 RM = @rm -f
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 OBJS = $(SRC:.cpp=.o)
-NAME = fixed
+NAME = fixedTriangle
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 all: $(NAME)

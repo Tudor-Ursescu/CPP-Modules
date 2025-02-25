@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: turescu <turescu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 11:26:57 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/23 14:04:55 by turescu          ###   ########.fr       */
+/*   Updated: 2025/02/25 13:44:24 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,12 @@ protected:
 public:
     AMateria();
     AMateria(std::string const & type);
-    AMateria& operator = (const AMateria& other);
-    virtual ~AMateria();
+    AMateria(const AMateria& other);
+    AMateria& operator = (const AMateria& other);//don't know if i need this.. strictly following 
+    virtual ~AMateria();                         //rule of implementing all classes in OCF(must check rules again)
     std::string const & getType() const; //Returns the materia type
-    virtual AMateria* clone() const = 0; // no need to define this one in the amateria.cpp, it is pure virtual so it will
-                                         // most probably will be used strctly by the subclasses
+    virtual AMateria* clone() const = 0; //-no need to define this one in the amateria.cpp, it is pure virtual so it will
+                                         // it will be used strctly by the subclasses
     virtual void use(ICharacter& target);
 };
 

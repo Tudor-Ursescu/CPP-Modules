@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: turescu <turescu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 14:16:18 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/23 14:18:33 by turescu          ###   ########.fr       */
+/*   Updated: 2025/02/25 12:10:41 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ public:
     Cure& operator = (const Cure& other);
     ~Cure();
     void use(ICharacter &target);
-    AMateria* clone() const;
+    Cure* clone() const;
 };
 
 #endif

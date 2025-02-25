@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: turescu <turescu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 16:46:10 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/23 16:48:10 by turescu          ###   ########.fr       */
+/*   Updated: 2025/02/25 11:40:37 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,8 @@
 #include "Cure.hpp"
 
 class ICharacter {
-private:
-    std::string name;
 public:
-    virtual ~ICharacter() {}
+    virtual ~ICharacter() {};
     virtual std::string const &getName() const = 0;
     virtual void equip(AMateria *m) = 0;
     virtual void unequip(int idx) = 0;

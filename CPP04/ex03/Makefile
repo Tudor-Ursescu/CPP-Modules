@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: turescu <turescu@student.42.fr>            +#+  +:+       +#+         #
+#    By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/23 11:04:37 by turescu           #+#    #+#              #
-#    Updated: 2025/02/23 16:45:20 by turescu          ###   ########.fr        #
+#    Updated: 2025/02/25 12:23:30 by tursescu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp AMateria.cpp Ice.cpp Cure.cpp ICharacter.cpp
+SRC = main.cpp AMateria.cpp Ice.cpp Cure.cpp Character.cpp MateriaSoutce.cpp
 CXX = @c++
 RM = @rm -f
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
