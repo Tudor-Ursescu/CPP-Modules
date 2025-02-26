@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 12:24:36 by tursescu          #+#    #+#             */
-/*   Updated: 2025/02/25 16:03:21 by tursescu         ###   ########.fr       */
+/*   Updated: 2025/02/26 12:37:24 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Character::Character() : name("Unknown"){
         garbage[i] = NULL;
 }
 
-Character::Character(const std::string& const name) : name(name){
+Character::Character(const std::string& name) : name(name){
     std::cout << YELLOW << "Character parameter constructor called" << RESET << std::endl;
     for (int i = 0; i < 4; i++)
         inventory[i] = NULL;
@@ -74,10 +74,7 @@ Character::~Character() {
         if (garbage[i]) {
             delete garbage[i];
         }
-    } 
-    //No need for deletion from the character. the char only handles pointers of those Materias
-    // the deletion of those materias should be handled by the owner (MateriaSource)
-    // OR SO I BELIEVED;
+    }
     std::cout << YELLOW << "Character destructor called" << RESET << std::endl;
 }
 

@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 11:59:02 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/25 13:44:53 by tursescu         ###   ########.fr       */
+/*   Updated: 2025/02/26 12:28:33 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ const std::string& AMateria::getType() const {
 }
 
 void AMateria::use(ICharacter &target) {
+    (void)target;
     std::cout << LAVENDER << "This AMateria does nothing" << RESET << std::endl;
 }

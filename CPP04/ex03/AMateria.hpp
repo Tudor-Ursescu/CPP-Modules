@@ -6,10 +6,11 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 11:26:57 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/25 13:44:24 by tursescu         ###   ########.fr       */
+/*   Updated: 2025/02/26 12:34:00 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #ifndef AMATERIA_HPP
 # define AMATERIA_HPP
 
@@ -17,7 +18,8 @@
 # include <iomanip>
 # include <cmath>
 # include <string>
-# include "ICharacter.hpp"
+
+class ICharacter;
 
 # define RED "\033[31m"
 # define BLUE "\033[34m"
@@ -40,9 +42,8 @@ public:
     AMateria(const AMateria& other);
     AMateria& operator = (const AMateria& other);//don't know if i need this.. strictly following 
     virtual ~AMateria();                         //rule of implementing all classes in OCF(must check rules again)
-    std::string const & getType() const; //Returns the materia type
-    virtual AMateria* clone() const = 0; //-no need to define this one in the amateria.cpp, it is pure virtual so it will
-                                         // it will be used strctly by the subclasses
+    std::string const & getType() const;
+    virtual AMateria* clone() const = 0;
     virtual void use(ICharacter& target);
 };
 

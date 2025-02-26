@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   IMateriaSource.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: turescu <turescu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 16:50:25 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/23 16:52:36 by turescu          ###   ########.fr       */
+/*   Updated: 2025/02/26 10:32:35 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #ifndef IMATERIASOURCE_HPP
 # define IMATERIASOURCE_HPP
 

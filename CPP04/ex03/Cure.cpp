@@ -6,11 +6,12 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 14:18:36 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/25 12:11:52 by tursescu         ###   ########.fr       */
+/*   Updated: 2025/02/26 12:36:47 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
+#include "ICharacter.hpp"
 
 Cure::Cure() : AMateria("cure") {
     std::cout << DEEP_GREEN << "Cure Materia default constructor called" << RESET << std::endl;
@@ -29,6 +30,7 @@ Cure& Cure::operator=(const Cure &other) {
         AMateria::operator=(other);
     }
     std::cout << DEEP_GREEN << "Cure Materia copy assignment operator called" << RESET << std::endl;
+    return *this;
 }
 
 Cure::~Cure() {

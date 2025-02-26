@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 15:19:29 by tursescu          #+#    #+#             */
-/*   Updated: 2025/02/25 15:57:34 by tursescu         ###   ########.fr       */
+/*   Updated: 2025/02/26 12:40:26 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,13 +54,8 @@ MateriaSource::~MateriaSource() {
 }
 
 void MateriaSource::learnMateria(AMateria *m) {
-    // i know i need to get somehow the type of the pointed Materia
-    // and check if this MS has learned it already or not;
-    // i declared two bools in the private
-    //i am a little stuck 
-    // i know with this bools i can also work on the createMateria
-    if (m = NULL) {
-        std::cout << PINK << "Cannot learn this" << RESET << std::endl;
+    if (m == NULL) {
+        std::cout << PINK << "Cannot learn this, the Materia doesn't exist" << RESET << std::endl;
         return;
     }
     for (int i = 0; i < 4; i++) {
@@ -73,4 +68,12 @@ void MateriaSource::learnMateria(AMateria *m) {
     }
 }
 
-AMateria *createMateria(std::string const &type);
+AMateria* MateriaSource::createMateria(std::string const &type) {
+    for (int i = 0; i < 4; i++) {
+        if (this->inventory[i]->getType() == type) {
+            return this->inventory[i]->clone();
+        }
+    }
+    std::cout << "PINK" << "MateriaSource hasn't learned this Materia" << RESET << std::endl;
+    return NULL;
+}

@@ -6,14 +6,18 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 14:16:18 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/25 12:10:41 by tursescu         ###   ########.fr       */
+/*   Updated: 2025/02/26 12:27:43 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
+#pragma once
 #ifndef CURE_HPP
 # define CURE_HPP
 
 # include "Ice.hpp"
+
+class ICharacter;
 
 class Cure : public AMateria {
 public:

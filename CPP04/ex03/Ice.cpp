@@ -6,11 +6,12 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 12:36:01 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/25 12:10:51 by tursescu         ###   ########.fr       */
+/*   Updated: 2025/02/26 12:36:01 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
+#include "ICharacter.hpp"
 
 Ice::Ice() : AMateria("ice") {
     std::cout << BLUE << "Ice Materia default constructor called" << RESET << std::endl;   

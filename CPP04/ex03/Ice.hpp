@@ -6,14 +6,15 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 12:22:00 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/25 12:10:35 by tursescu         ###   ########.fr       */
+/*   Updated: 2025/02/26 12:34:19 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef ICE_HPP
 # define ICE_HPP
 
-# include "AMateria.hpp"
+#include "AMateria.hpp"
 
 class Ice : public AMateria {
 private:

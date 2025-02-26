@@ -6,10 +6,11 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 11:40:46 by tursescu          #+#    #+#             */
-/*   Updated: 2025/02/25 14:22:40 by tursescu         ###   ########.fr       */
+/*   Updated: 2025/02/26 12:24:52 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #ifndef CHARACTER_HPP
 # define CHARACTER_HPP
 
@@ -21,7 +22,7 @@ private:
     AMateria* garbage[10];
 public:
     Character();
-    Character(const std::string& const name);
+    Character(const std::string& name);
     Character(const Character& other);
     Character& operator = (const Character& other);
     ~Character();
