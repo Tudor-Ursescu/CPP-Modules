@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 11:15:41 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/24 12:45:08 by tursescu         ###   ########.fr       */
+/*   Updated: 2025/02/26 15:45:56 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@ Fixed::Fixed(const Fixed& copy) : val(copy.val) {
     std::cout << BLUE << "Copy constructor called" << RESET << '\n';
 }
 
+
+//copy assignment operator returns the modified version of the object, hence the Fixed&
+// and it does not ineficiently copy the object
 Fixed& Fixed::operator =( const Fixed& copy ) { 
     if (this != &copy) //to prevent self assignment
     {

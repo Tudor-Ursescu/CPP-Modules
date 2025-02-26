@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Point.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: turescu <turescu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 15:58:07 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/15 16:58:16 by turescu          ###   ########.fr       */
+/*   Updated: 2025/02/26 17:49:56 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,15 @@
 
 #include "Fixed.hpp"
 
-class Point
-{
+class Point {
 private:
     const Fixed xp;
     const Fixed yp;
-    public:
+    Point& operator = (const Point& other);
+public:
     Point();
     Point(const Fixed x, const Fixed y);
     Point(const Point& other);      
-    // Point& operator = (const Point& other);
     Fixed getX() const;
     Fixed getY() const;
     ~Point();

@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 11:15:41 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/24 16:36:31 by tursescu         ###   ########.fr       */
+/*   Updated: 2025/02/26 17:40:09 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,22 +41,22 @@ Fixed& Fixed::operator = ( const Fixed& copy ) {
 }
 
 Fixed& Fixed::operator ++() {
-    this->val += 1;
-    return *this;
+    this->val += 1; // given the fact that the feractionalBits is 8, then when we increment by 1
+    return *this;   // we are actually incrementing by 1/2^8 (1/256) = 0.00390625 
 }
 
-Fixed Fixed::operator ++(int) { // post incrementation : store old value, modify , and return the old val.
-    Fixed temp(*this);
+Fixed Fixed::operator ++(int) { // post incrementation : store old value in temp copy of instance
+    Fixed temp(*this);     // modify the actual value  , and return the old val, from the copy obj.
     this->val += 1;
     return temp;
 }
 
-Fixed& Fixed::operator --() {
-    this->val -= 1;
+Fixed& Fixed::operator --() { //returns a reference to the instance so we don't make a coppy of the
+    this->val -= 1;           // modified object.
     return *this;
 }
 
-Fixed Fixed::operator --(int) { // post decrementation : store old value, modify, and return old val.
+Fixed Fixed::operator --(int) { // post decrementation : store old value , modify, and return old val.
     Fixed temp(*this);
     this->val -= 1;
     return temp;

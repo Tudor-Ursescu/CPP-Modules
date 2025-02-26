@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Point.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: turescu <turescu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 15:57:53 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/16 09:54:09 by turescu          ###   ########.fr       */
+/*   Updated: 2025/02/26 17:58:15 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,6 @@ Fixed Point::getX(void) const {
 Fixed Point::getY(void) const {
     return this->yp;
 }
-// Point& Point::operator = (const Point& other) {
-//     if (this != &other) {
-//         this->xp = other.xp;
-//         this->yp = other.yp;
-//     }
-//     std::cout << PINK << "Point copy assignment operator called" << RESET << '\n';
-//     return (*this);
-// }
 
 bool bsp(Point const a, Point const b, Point const c, Point const point) {
     Fixed originalArea = Fixed::abs((a.getX() * (b.getY() - c.getY()) +
@@ -61,3 +53,6 @@ bool bsp(Point const a, Point const b, Point const c, Point const point) {
         return false;
     return (area1 + area2 + area3 == originalArea);
 }
+
+// BSP stand for "Binary Space Partitioning" and i did not even need 
+// to look into it to solve this geometrical problem.
