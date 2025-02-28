@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: turescu <turescu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 10:24:47 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/16 12:50:26 by turescu          ###   ########.fr       */
+/*   Updated: 2025/02/28 11:04:54 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ public:
     ClapTrap& operator =(const ClapTrap& other);
     void attack(const std::string&target);
     void takeDamage(unsigned int amount);
-    void getRepaired(unsigned int amount);
+    void beRepaired(unsigned int amount);
 };
 
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: turescu <turescu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 13:16:20 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/16 15:37:23 by turescu          ###   ########.fr       */
+/*   Updated: 2025/02/28 12:40:52 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ public:
     ScavTrap& operator=(const ScavTrap& other);
     ~ScavTrap();
     void guardGate();
+    int getHealth() const;
 };
 
 #endif

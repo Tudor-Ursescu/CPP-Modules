@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: turescu <turescu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 13:48:36 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/16 17:36:51 by turescu          ###   ########.fr       */
+/*   Updated: 2025/02/28 12:40:40 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,4 +74,8 @@ void ScavTrap::attack(const std::string &target)
     std::cout << CYAN << "ScavTrap " << this->name << " attacks "
               << target << ", causing " << this->damage
               << " points of damage!" << RESET << '\n';
+}
+
+int ScavTrap::getHealth() const {
+    return this->health;
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: turescu <turescu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 10:34:49 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/16 13:10:34 by turescu          ###   ########.fr       */
+/*   Updated: 2025/02/28 11:05:03 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,13 @@ ClapTrap& ClapTrap::operator = (const ClapTrap& other) {
 }
 
 ClapTrap::~ClapTrap() {
-    std::cout << RED << "Destructor called" << RESET << std::endl;
+    std::cout << RED << name << " Destructor called" << RESET << std::endl;
 }
 
 void ClapTrap::attack(const std::string& target) {
     if (!this->energy) {
         std::cout << YELLOW << "ClapTrap " << this->name
-                  << "'s energy depleted" << RESET << '\n';
+                  << "'s energy depleted" << RESET << std::endl;
         return ;
     }
     if (!this->health){
@@ -72,7 +72,7 @@ void ClapTrap::takeDamage(unsigned int amount) {
         return ;
     }
 }
-void ClapTrap::getRepaired(unsigned int amount) {
+void ClapTrap::beRepaired(unsigned int amount) {
     if (!this->energy) {
         std::cout << "ClapTrap " << this->name << " has no more energy for repairs...\n";
         return ;
@@ -100,7 +100,7 @@ void ClapTrap::getRepaired(unsigned int amount) {
             else {
                 std::cout << BLUE << "ClapTrap " << this->name
                           << " has recieved " << amount << " points of health back!"
-                          << RESET << '\n';  
+                          << RESET << std::endl;  
             }
         }
     }

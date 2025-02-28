@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: turescu <turescu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 13:42:10 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/20 17:57:36 by turescu          ###   ########.fr       */
+/*   Updated: 2025/02/28 13:01:41 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,3 +53,7 @@ void DiamondTrap::attack(const std::string& target) {
 void DiamondTrap::whoAmI(void) {
     std::cout << PINK << "My name is : " << this->name << ", and my ancestor is : " << ClapTrap::name << RESET << std::endl;
 }
+
+int DiamondTrap::getHealth() const { return this->health; }
+int DiamondTrap::getEnergy() const { return this->energy; }
+int DiamondTrap::getDamage() const { return this->damage; }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: turescu <turescu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 15:21:25 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/16 17:06:11 by turescu          ###   ########.fr       */
+/*   Updated: 2025/02/28 12:47:23 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ public:
     FragTrap& operator=(const FragTrap& other);
     ~FragTrap();
     void highFivesGuys(void);
+    int getHealth() const;
 };
 
 

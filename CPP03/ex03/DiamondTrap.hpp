@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: turescu <turescu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 13:18:50 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/20 17:17:11 by turescu          ###   ########.fr       */
+/*   Updated: 2025/02/28 13:02:09 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,8 @@ public:
     ~DiamondTrap();
     void attack(const std::string& target);
     void whoAmI();
+    int getHealth() const;
+    int getEnergy() const;
+    int getDamage() const;
 };
 #endif
