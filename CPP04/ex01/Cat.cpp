@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: turescu <turescu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 21:39:42 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/22 15:49:06 by turescu          ###   ########.fr       */
+/*   Updated: 2025/03/03 09:22:54 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ Cat::Cat(const Cat& other) : Animal(other) {
     std::cout << PINK << "Cat copy constructor called" << RESET << std::endl;
     this->brain = new Brain(*(other.brain)); //deep copy of brain, not shallow , meaning we dont just copy a pointer
 }
+//we are dereferencing the pointer(*(other.brain)), having the actual other.brain, which we copy into a new one.
 
 Cat& Cat::operator = (const Cat& other) {
     if (this != &other) {

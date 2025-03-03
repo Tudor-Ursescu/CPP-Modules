@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: turescu <turescu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 21:00:15 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/22 11:27:30 by turescu          ###   ########.fr       */
+/*   Updated: 2025/03/03 08:48:35 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Animal::Animal() : type("Animal") {
 }
 
 Animal::Animal(const std::string& type) : type("Animal") {
-    (void)type;
+    (void)type; // in this particular subject, we need to hold a general type for the base class
     std::cout << RED << "Animal parameter constructor called" << RESET << std::endl;
 }
 

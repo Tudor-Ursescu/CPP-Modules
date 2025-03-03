@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: turescu <turescu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 20:54:49 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/22 16:20:44 by turescu          ###   ########.fr       */
+/*   Updated: 2025/03/03 09:41:02 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,33 @@
 
 int main(void)
 {
-    // {
-    //     const Animal *j = new Dog();
-    //     const Animal *i = new Cat();
-    //     delete j; // should not create a leak
-    //     delete i;
-    // }
-    // {
-    //     int N = 10;
-    //     Animal **zoo = animalZoo(N);
-    //     if (zoo != NULL){
-    //         for (int i = 0; i < N; i++) {
-    //             zoo[i]->makeSound();
-    //         }
-    //         for (int i = 0; i < N; i++) {
-    //             delete zoo[i];
-    //         }
-    //         delete[] zoo;
-    //     }
-    // }
+    {
+        const Animal *j = new Dog();
+        const Animal *i = new Cat();
+        delete j; // should not create a leak
+        delete i;
+        std::cout << DEEP_GREEN << "............................." << RESET << std::endl;
+        std::cout << DEEP_GREEN << "............................." << RESET << std::endl;
+        std::cout << DEEP_GREEN << "............................." << RESET << std::endl;
+        std::cout << DEEP_GREEN << "............................." << RESET << std::endl;
+    }
+    {
+        int N = 10;
+        Animal **zoo = animalZoo(N);
+        if (zoo != NULL){
+            for (int i = 0; i < N; i++) {
+                zoo[i]->makeSound();
+            }
+            freeZoo(zoo, N);
+        }
+        std::cout << DEEP_GREEN << "............................." << RESET << std::endl;
+        std::cout << DEEP_GREEN << "............................." << RESET << std::endl;
+        std::cout << DEEP_GREEN << "............................." << RESET << std::endl;
+        std::cout << DEEP_GREEN << "............................." << RESET << std::endl;
+    }
     {
         //this is a tester intended to show that the copies are not shallow
+        //meaning that different dogs have individual brains, not just pointers to the same one 
         Dog originalDog;
         originalDog.getBrain()->setIdea(0, "I feel quite hungry");
         Dog newDog(originalDog);
@@ -49,5 +55,7 @@ int main(void)
         std::cout << "OriginalDog idea: " << originalDog.getBrain()->getIdea(0) << std::endl;
         std::cout << "NewDog idea: " << newDog.getBrain()->getIdea(0) << std::endl;
     }
+    // Dog basic;
+    // Dog tmp = basic;
     return 0;
 }

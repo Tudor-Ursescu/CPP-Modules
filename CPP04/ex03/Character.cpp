@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 12:24:36 by tursescu          #+#    #+#             */
-/*   Updated: 2025/02/26 12:37:24 by tursescu         ###   ########.fr       */
+/*   Updated: 2025/03/03 10:04:07 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Character::Character() : name("Unknown"){
     std::cout << YELLOW << "Character default constructor called" << RESET << std::endl;
     for (int i = 0; i < 4; i++)
         inventory[i] = NULL;
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 100; i++)
         garbage[i] = NULL;
 }
 
@@ -24,7 +24,7 @@ Character::Character(const std::string& name) : name(name){
     std::cout << YELLOW << "Character parameter constructor called" << RESET << std::endl;
     for (int i = 0; i < 4; i++)
         inventory[i] = NULL;
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 100; i++)
         garbage[i] = NULL;
 }
 
@@ -37,7 +37,7 @@ Character::Character(const Character& other) : name(other.getName()) {
             this->inventory[i] = NULL; 
         }
     }
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 100; i++) {
         this->garbage[i] = NULL;
     }
     std::cout << YELLOW << "Character copy constructor called" << RESET << std::endl;
@@ -56,7 +56,7 @@ Character& Character::operator = (const Character& other) {
                 this->inventory[i] = other.inventory[i]->clone();
             }
         }
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 100; i++) {
             this->garbage[i] = NULL;
         }
     }
@@ -70,7 +70,7 @@ Character::~Character() {
             delete inventory[i];
         }
     }
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 100; i++) {
         if (garbage[i]) {
             delete garbage[i];
         }
@@ -99,7 +99,7 @@ void Character::unequip(int idx) {
         return ;
     }
     int i = 0;
-    while (i < 10) {
+    while (i < 100) {
         if (!garbage[i]) {
             break;
         }

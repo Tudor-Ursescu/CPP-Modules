@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: turescu <turescu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 11:42:02 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/22 11:44:41 by turescu          ###   ########.fr       */
+/*   Updated: 2025/03/03 08:26:52 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WRONGANIMAL_HPP
 # define WRONGANIMAL_HPP
 
-# include "Animal.hpp"
+# include "Dog.hpp"
 
 class WrongAnimal
 {

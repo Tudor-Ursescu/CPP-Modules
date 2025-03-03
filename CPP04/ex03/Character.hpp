@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 11:40:46 by tursescu          #+#    #+#             */
-/*   Updated: 2025/02/26 12:24:52 by tursescu         ###   ########.fr       */
+/*   Updated: 2025/03/03 09:54:24 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class Character : public ICharacter {
 private:
     std::string name;
     AMateria* inventory[4];
-    AMateria* garbage[10];
+    AMateria* garbage[100];
 public:
     Character();
     Character(const std::string& name);

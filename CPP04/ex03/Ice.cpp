@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 12:36:01 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/26 12:36:01 by tursescu         ###   ########.fr       */
+/*   Updated: 2025/03/03 09:56:48 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ Ice::~Ice() {
 }
 
 void Ice::use(ICharacter &target) {
-    std::cout << BLUE << "*shoots an ice bolt at " << target.getName() << " *";                     
+    std::cout << BLUE << "*shoots an ice bolt at " << target.getName() << " *" << RESET << std::endl;                     
 }
 
 Ice* Ice::clone() const {

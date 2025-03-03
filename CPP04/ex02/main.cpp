@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: turescu <turescu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 20:54:49 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/23 10:59:07 by turescu          ###   ########.fr       */
+/*   Updated: 2025/03/03 09:59:19 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,11 @@ int main(void)
 {
     {
         Animal* d = new Dog();
+        Animal* c = new Cat();
+        c->makeSound();
         d->makeSound();
         delete d;
+        delete c;
     }
     // {
     //     Animal meta;
