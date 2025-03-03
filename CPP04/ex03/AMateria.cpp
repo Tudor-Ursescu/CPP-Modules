@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 11:59:02 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/26 12:28:33 by tursescu         ###   ########.fr       */
+/*   Updated: 2025/03/03 10:12:23 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,9 @@ AMateria::AMateria(const AMateria& other) : type(other.getType()){
     std::cout << LAVENDER << "AMateria copy constructor called" << RESET << std::endl;
 }
 
-//don't even know if i need this one... after all this is an base abstract class.
+//don't even know if i need this one... after all this is an abstract base class.
+// answer : as long as we are talking about an 'interface' or an abstract class, we
+// don't necessarilly need to respect the OCF
 AMateria& AMateria:: operator = (const AMateria &other) {
     if (this != &other) {
         this->type = other.type;

@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 11:40:46 by tursescu          #+#    #+#             */
-/*   Updated: 2025/03/03 09:54:24 by tursescu         ###   ########.fr       */
+/*   Updated: 2025/03/03 12:41:44 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ public:
     void equip(AMateria *m);
     void unequip(int idx);
     void use(int idx, ICharacter &target);
+    void printInventory();
+    void printGarbage();
 };
 
 

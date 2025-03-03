@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 12:24:36 by tursescu          #+#    #+#             */
-/*   Updated: 2025/03/03 10:04:07 by tursescu         ###   ########.fr       */
+/*   Updated: 2025/03/03 13:04:04 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ void Character::equip(AMateria *m) {
             return;
         }
         else {
-            continue;
+            continue ;
         }
     }
 }
@@ -126,4 +126,12 @@ void Character::use(int idx, ICharacter &target) {
     }
     std::cout << YELLOW << "Character " << this->name << " " << RESET;
     this->inventory[idx]->use(target);
+}
+
+void Character::printGarbage() {
+    std::cout << LIGHT_YELLOW << this->name << "'s garbage: " << RESET << std::endl;
+    for (int i = 0; i < 100; i++) {
+        std::cout << LIGHT_YELLOW << this->garbage[i] << RESET << std::endl;
+    }
+    
 }

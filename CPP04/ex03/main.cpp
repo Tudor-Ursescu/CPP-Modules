@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 16:44:16 by turescu           #+#    #+#             */
-/*   Updated: 2025/02/26 10:26:40 by tursescu         ###   ########.fr       */
+/*   Updated: 2025/03/03 12:53:57 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,11 @@ int main()
     tmp = src->createMateria("cure");
     me->equip(tmp);
     ICharacter *bob = new Character("bob");
+    me->unequip(0);
     me->use(0, *bob);
     me->use(1, *bob);
-    delete bob;
     delete me;
     delete src;
+    delete bob;
     return 0;
 }

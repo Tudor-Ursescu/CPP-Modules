@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 15:19:29 by tursescu          #+#    #+#             */
-/*   Updated: 2025/02/26 12:40:26 by tursescu         ###   ########.fr       */
+/*   Updated: 2025/03/03 13:01:16 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,9 +62,12 @@ void MateriaSource::learnMateria(AMateria *m) {
         if (!this->inventory[i]) {
             this->inventory[i] = m->clone(); // deep copy of the materia
             std::cout << "Materia " << m->getType() << " learned" << RESET << std::endl;
+            delete m;
             return ;
         }
-        std::cout << "Cannot learn any more Materias" << RESET << std::endl;
+        else {
+            std::cout << "Cannot learn any more Materias" << RESET << std::endl;
+        }
     }
 }
 
