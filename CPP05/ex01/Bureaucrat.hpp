@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 14:07:54 by tursescu          #+#    #+#             */
-/*   Updated: 2025/03/12 18:10:03 by tursescu         ###   ########.fr       */
+/*   Updated: 2025/03/12 17:32:19 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,11 @@ private:
     Bureaucrat(const Bureaucrat& other);
     Bureaucrat& operator = (const Bureaucrat& other);
     ~Bureaucrat();
-    class GradeTooHighException : public std::exception {
+    class GradeTooHigh : public std::exception {
         public:
             const char *what() const throw();
     };
-    class GradeTooLowException : public std::exception {
+    class GradeTooLow : public std::exception {
         public:
             const char *what() const throw();
     };
