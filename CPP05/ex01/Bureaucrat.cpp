@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 14:07:56 by tursescu          #+#    #+#             */
-/*   Updated: 2025/03/17 14:30:46 by tursescu         ###   ########.fr       */
+/*   Updated: 2025/03/18 19:31:46 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ void Bureaucrat::signForm(Form& form) {
         form.beSigned(*this);
         std::cout << DEEP_GREEN << this->name << RESET << " signed " << YELLOW << form.getName() << RESET << std::endl;
     } catch (const std::exception& e) {
-        std::cout << DEEP_GREEN << this->name << RESET << " couldn't sign " << YELLOW << form.getName()
-                  << RESET << " because " << e.what() << std::endl; 
+        std::cout << RED << this->name << " couldn't sign " << form.getName()
+                  << " because " << e.what() << std::endl; 
     }
 }
