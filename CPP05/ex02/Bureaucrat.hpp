@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 14:07:54 by tursescu          #+#    #+#             */
-/*   Updated: 2025/03/17 14:31:39 by tursescu         ###   ########.fr       */
+/*   Updated: 2025/03/17 20:16:59 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <string>
 # include <cmath>
 # include <iomanip>
-# include "Form.hpp"
+# include "AForm.hpp"
 
 # define RED "\033[31m"
 # define BLUE "\033[34m"
@@ -36,7 +36,7 @@ class Bureaucrat
 private:
     const std::string name;
     int grade;
-    public:
+public:
     Bureaucrat();
     Bureaucrat(const std::string& name, int grade);
     Bureaucrat(const Bureaucrat& other);
@@ -54,7 +54,8 @@ private:
     int getGrade() const;
     void incrementGrade(int n);
     void decrementGrade(int n);
-    void signForm(Form& form);
+    void signForm(AForm& form);
+    void executeForm(const AForm& form);
 };
 
 

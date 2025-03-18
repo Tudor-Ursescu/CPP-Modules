@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 14:07:51 by tursescu          #+#    #+#             */
-/*   Updated: 2025/03/12 17:56:23 by tursescu         ###   ########.fr       */
+/*   Updated: 2025/03/17 11:41:33 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,3 +72,7 @@ int main()
     }
     return 0;
 }
+
+// we use std::exception& e in catch() because:
+// *it allows to catch all exceptions in a generic way;
+// *makes your program more robust by handling errors instead of crashing;

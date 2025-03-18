@@ -6,16 +6,17 @@
 #    By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/12 14:05:25 by tursescu          #+#    #+#              #
-#    Updated: 2025/03/18 14:25:28 by tursescu         ###   ########.fr        #
+#    Updated: 2025/03/18 17:50:24 by tursescu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp Bureaucrat.cpp Form.cpp
+SRC = main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp \
+	  ShrubberyCreationForm.cpp Intern.cpp
 CXX = @c++
 RM = @rm -f
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 OBJS = $(SRC:.cpp=.o)
-NAME = forms
+NAME = intern
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 all: $(NAME)

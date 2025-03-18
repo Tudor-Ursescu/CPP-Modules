@@ -6,7 +6,7 @@
 /*   By: tursescu <tursescu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 14:07:56 by tursescu          #+#    #+#             */
-/*   Updated: 2025/03/17 11:28:16 by tursescu         ###   ########.fr       */
+/*   Updated: 2025/03/18 14:02:36 by tursescu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ Bureaucrat::Bureaucrat() : name("Unknown"), grade(150){
 
 Bureaucrat::Bureaucrat(const std::string& name, int grade) : name(name), grade(grade){
     if (this->grade < 1) {
-        throw GradeTooHighException(); //throws exception
+        throw GradeTooHighException();
     }
     else if (this->grade > 150) {
-        throw GradeTooLowException(); // throws exception
+        throw GradeTooLowException();
     }
-    std::cout << DEEP_GREEN << this->name << " parameater constructor called" << RESET << std::endl;
+    std::cout << DEEP_GREEN << this->name << " parameter constructor called" << RESET << std::endl;
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat& other) : name(other.getName()), grade(other.getGrade()) {
@@ -88,4 +88,24 @@ const char * Bureaucrat::GradeTooHighException::what() const throw() {
 
 const char * Bureaucrat::GradeTooLowException::what() const throw() {
     return "Grade is too low!";
+}
+
+void Bureaucrat::signForm(AForm& form) {
+    try {
+        form.beSigned(*this);
+        std::cout << DEEP_GREEN << this->name << RESET << " signed " << YELLOW << form.getName() << RESET << std::endl;
+    } catch (const std::exception& e) {
+        std::cout << DEEP_GREEN << this->name << RESET << " couldn't sign " << YELLOW << form.getName()
+                  << RESET << " because " << e.what() << std::endl; 
+    }
+}
+
+void Bureaucrat::executeForm(const AForm& form) {
+    try {
+        std::cout << DEEP_GREEN << name << " executed " << form.getName() <<  std::endl;
+        form.execute(*this);
+    } catch (const std::exception& e) {
+        std::cout << DEEP_GREEN << this->name << " couldn't execute " << YELLOW << form.getName() 
+                  << RESET << " because " << e.what() << std::endl;
+    }
 }
